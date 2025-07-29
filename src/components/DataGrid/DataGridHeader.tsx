@@ -73,7 +73,11 @@ export const DataGridHeader: React.FC<DataGridHeaderProps> = ({
         <span className="truncate">{column.headerName}</span>
         {column.sortable && sortDirection && (
           <span className="text-blue-500">
-            {sortDirection === "asc" ? "↑" : "↓"}
+            {sortDirection === "asc" ? (
+              <span>&uarr;</span>
+            ) : (
+              <span>&darr;</span>
+            )}
           </span>
         )}
       </div>

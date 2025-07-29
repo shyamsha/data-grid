@@ -48,7 +48,7 @@ export const DataGridToolbar: React.FC<DataGridToolbarProps> = ({
   const handleBulkAction = (action: string) => {
     const selectedIds = Array.from(state.selectedRows);
     console.log(`Bulk action: ${action} on items:`, selectedIds);
-    // In a real app, implement the actual bulk actions here
+    // Implement bulk action logic here
   };
 
   return (
@@ -71,7 +71,7 @@ export const DataGridToolbar: React.FC<DataGridToolbarProps> = ({
           />
 
           <Button variant="ghost" onClick={onToggleFilters}>
-            🔍 Filters
+            Filters
           </Button>
         </div>
       </div>
@@ -103,12 +103,12 @@ export const DataGridToolbar: React.FC<DataGridToolbarProps> = ({
         />
 
         <Button variant="ghost" onClick={onToggleColumnManager}>
-          ⚙️ Columns
+          <span>&#9881; Columns</span>
         </Button>
 
         <div className="flex items-center space-x-1">
           <Button variant="ghost" size="sm" onClick={() => handleExport("csv")}>
-            📊 CSV
+            <span>&#128200; CSV</span>
           </Button>
           <Button
             variant="ghost"
@@ -120,7 +120,7 @@ export const DataGridToolbar: React.FC<DataGridToolbarProps> = ({
         </div>
 
         <Button variant="ghost" onClick={toggleTheme}>
-          {theme === "light" ? "🌙" : "☀️"}
+          {theme === "light" ? <span>&#9789;</span> : <span>&#9788;</span>}
         </Button>
       </div>
     </motion.div>
