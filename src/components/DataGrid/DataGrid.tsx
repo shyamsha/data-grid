@@ -82,12 +82,12 @@ const defaultColumns: Column[] = [
   {
     field: "actions",
     headerName: "Actions",
-    width: 120,
+    width: 220,
     sortable: false,
     filterable: false,
     type: "actions",
     renderCell: (params) => (
-      <div className="flex space-x-1">
+      <div className="flex">
         <Button
           size="sm"
           variant="ghost"
