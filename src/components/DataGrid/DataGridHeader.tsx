@@ -58,7 +58,6 @@ export const DataGridHeader: React.FC<DataGridHeaderProps> = ({
 
   const handleContextMenu = (e: React.MouseEvent) => {
     e.preventDefault();
-    // Show column context menu (pin, hide, etc.)
   };
 
   return (
